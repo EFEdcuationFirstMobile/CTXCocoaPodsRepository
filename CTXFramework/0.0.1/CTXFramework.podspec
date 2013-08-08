@@ -18,7 +18,15 @@ Pod::Spec.new do |s|
     
   s.source       = { :git => "https://github.com/EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}", :submodules => true }
   
-  s.source_files = 'CTXFramework/**/.{h,m}'
+  s.source_files = 'CTXFramework/Sources/**/*.{h,m}', 'CTXFramework/Vendor/**/*.{h,m}'
+  s.frameworks   = 'CoreData'
   s.requires_arc = true
-
+  s.prefix_header_contents = <<-EOS
+  #ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #import "CTXCommon.h"
+    #import "CTXLog.h"
+  #endif
+  EOS
 end
