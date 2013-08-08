@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CTXFramework"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "CTX iOS Framework."
   s.homepage     = "http://ef.com"
   
@@ -17,8 +17,23 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.0'
     
   s.source       = { :git => "https://github.com/EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}", :submodules => true }
+  s.dependency 'CocoaLumberjack'
+  s.dependency 'JSONKit'
+  s.dependency 'TMCache'
   
   s.source_files = 'CTXFramework/Sources/**/*.{h,m}', 'CTXFramework/Vendor/**/*.{h,m}'
+  s.exclude_files = 'CTXFramework/Sources/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/OrderedDictionary.{h,m}', 'CTXFramework/Vendor/librabbitmq-objc/*.{h,m}'
+
+  s.subspec 'Categories' do |cat|
+    cat.source_files = 'CTXFramework/Sources/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/OrderedDictionary.{h,m}'
+    cat.requires_arc = false
+  end
+
+  s.subspec 'librabbitmq-objc' do |r| 
+    r.source_files = 'CTXFramework/Vendor/librabbitmq-objc/*.{h,m}'
+    r.requires_arc = false
+  end
+
   s.frameworks   = 'CoreData'
   s.requires_arc = true
   s.prefix_header_contents = <<-EOS
