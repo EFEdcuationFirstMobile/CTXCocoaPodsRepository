@@ -35,17 +35,14 @@ Pod::Spec.new do |s|
     cat.requires_arc = false
   end
 
-  s.subspec 'rabbitmq-lib' do |rabbitmqlib|
-    rabbitmqlib.vendored_libraries = 'CTXFramework/Vendor/rabbitmq-lib/librabbitmq.a'
-  end
-
   s.subspec 'librabbitmq-objc' do |r| 
     r.source_files = 'CTXFramework/Vendor/librabbitmq-objc/*.{h,m}'
     r.requires_arc = false
   end
 
   s.frameworks   = 'CoreData'
-  s.ios.library  = 'z'
+  s.libraries = 'z', 'CTXFramework/Vendor/rabbitmq-lib/librabbitmq.a'
+  
   s.requires_arc = true
   s.prefix_header_contents = <<-EOS
   #ifdef __OBJC__
