@@ -40,8 +40,9 @@ Pod::Spec.new do |s|
     r.requires_arc = false
   end
 
+  s.preserve_paths = 'CTXFramework/Vendor/rabbitmq-lib/librabbitmq.a'
   s.frameworks   = 'CoreData'
-  s.libraries = 'z', 'CTXFramework/Vendor/rabbitmq-lib/librabbitmq.a'
+  s.libraries = 'z', 'rabbitmq'
   
   s.requires_arc = true
   s.prefix_header_contents = <<-EOS
