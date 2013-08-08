@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.dependency 'CocoaLumberjack'
   s.dependency 'JSONKit'
   s.dependency 'TMCache'
+  s.dependency 'JRSwizzle'
   
   s.source_files = 'CTXFramework/Sources/**/*.{h,m}', 'CTXFramework/Vendor/**/*.{h,m}'
   s.exclude_files = 'CTXFramework/Sources/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/OrderedDictionary.{h,m}', 'CTXFramework/Vendor/librabbitmq-objc/*.{h,m}'
