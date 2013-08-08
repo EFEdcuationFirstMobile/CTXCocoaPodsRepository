@@ -21,10 +21,14 @@ Pod::Spec.new do |s|
   s.dependency 'JSONKit'
   s.dependency 'TMCache'
   s.dependency 'JRSwizzle'
-  s.dependency 'Reachability'
-  
+
   s.source_files = 'CTXFramework/Sources/**/*.{h,m}', 'CTXFramework/Vendor/**/*.{h,m}'
-  s.exclude_files = 'CTXFramework/Sources/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/OrderedDictionary.{h,m}', 'CTXFramework/Vendor/librabbitmq-objc/*.{h,m}'
+  s.exclude_files = 'CTXFramework/Sources/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/OrderedDictionary.{h,m}', 'CTXFramework/Vendor/librabbitmq-objc/*.{h,m}', 'CTXFramework/Vendor/Reachability/*.{h,m}'
+
+  s.subspec 'Reachability' do |reachability|
+    reachability.source_files = 'CTXFramework/Vendor/Reachability/*.{h,m}'
+    reachability.requires_arc = false
+  end
 
   s.subspec 'Categories' do |cat|
     cat.source_files = 'CTXFramework/Sources/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/OrderedDictionary.{h,m}'
