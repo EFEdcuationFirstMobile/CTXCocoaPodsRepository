@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     
   s.source       = { :git => "https://github.com/EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}", :submodules => true }
   
-  s.source_files = '*'
+  s.source_files = 'CTXFramework/**/.{h,m}'
   s.requires_arc = true
 
 end
