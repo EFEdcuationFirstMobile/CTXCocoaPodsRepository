@@ -41,9 +41,9 @@ Pod::Spec.new do |s|
   end
 
   s.preserve_paths = 'CTXFramework/Vendor/rabbitmq-lib/librabbitmq.a'
-  s.frameworks   = 'CoreData', 'CoreMedia'
-  s.libraries = 'z'
-  
+  s.frameworks   = 'CoreData', 'CoreMedia', 'MediaPlayer'
+  s.libraries = 'z', 'rabbitmq'
+  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/CTXFramework/CTXFramework/Vendor/rabbitmq-lib/"' }
   s.requires_arc = true
   s.prefix_header_contents = <<-EOS
   #ifdef __OBJC__
