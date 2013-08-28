@@ -4,6 +4,8 @@ Pod::Spec.new do |s|
   s.summary  = 'Objective-C wrapper for librabbitmq-c'
   s.homepage     = "http://ef.com"
   
+  s.license      = { :type => 'GPL3', :file => 'LICENSE.md' }
+
   s.authors      = {
     "Alberto DeBortoli" => "alberto.debortoli@ef.com",
     "Dmitry Makarenko"  => "dmitry.makarenko@ef.com",
