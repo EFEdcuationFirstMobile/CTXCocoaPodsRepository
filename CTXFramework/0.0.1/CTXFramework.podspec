@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "CTXFramework"
-  s.version      = "0.0.2"
+  s.version      = "0.0.1"
   s.summary      = "CTX iOS Framework."
   s.homepage     = "http://ef.com"
   
-  s.license      = { :type => 'BSD', :file => 'LICENSE.txt' }
+  s.license      = { :type => 'BSD', :file => 'LICENSE.md' }
   
   s.authors      = { 
     "Alberto DeBortoli" => "alberto.debortoli@ef.com",
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     "Stefan Ceriu"      => "stefan.ceriu@ef.com"}
   
   s.platform     = :ios
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '5.1'
     
   s.source       = { :git => "https://github.com/EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}", :submodules => true }
   s.dependency 'CocoaLumberjack'
