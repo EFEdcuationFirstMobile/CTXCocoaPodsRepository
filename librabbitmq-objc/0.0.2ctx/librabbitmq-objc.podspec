@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   
   s.homepage = 'https://github.com/EFEdcuationFirstMobile/librabbitmq-objc'
   s.source   = { :git => 'https://github.com/EFEdcuationFirstMobile/librabbitmq-objc.git', :tag => '0.0.2ctx' }
-  s.source_files = '*.*'
-  s.requires_arc = true
+  s.source_files = '*.*', 'rabbitmq-lib/*.*'
+  s.requires_arc = false
 end
