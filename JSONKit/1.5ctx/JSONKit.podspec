@@ -6,6 +6,5 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/johnezang/JSONKit'
   s.author   = 'John Engelhart'
   s.source   = { :git => 'https://github.com/EFEdcuationFirstMobile/JSONKit.git', :tag => '1.5ctx' }
-
   s.source_files   = 'JSONKit.*'
 end
