@@ -6,26 +6,36 @@ Pod::Spec.new do |s|
   
   s.license      = { :type => 'BSD', :file => 'LICENSE.md' }
   
-  s.authors      = { 
-    "Alberto DeBortoli" => "alberto.debortoli@ef.com",
-    "Dmitry Makarenko"  => "dmitry.makarenko@ef.com",
+  s.authors      = {
     "Marco Cattai"      => "marco.cattai@ef.com",
-    "Pedro Gomes"       => "pedro.gomes@ef.com", 
-    "Stefan Ceriu"      => "stefan.ceriu@ef.com"}
+    "Stefan Ceriu"      => "stefan.ceriu@ef.com",
+    "Alberto DeBortoli" => "alberto.debortoli@ef.com",
+    "Pedro Gomes"       => "pedro.gomes@ef.com",
+    "Dmitry Makarenko"  => "dmitry.makarenko@ef.com"}
   
   s.platform     = :ios
   s.ios.deployment_target = '5.1'
     
-  s.source       = { :git => "https://github.com/EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}", :submodules => true }
-  s.dependency 'CocoaLumberjack'
-  s.dependency 'TMCache'
-  s.dependency 'JRSwizzle'
-  s.dependency 'JSONKit'
-  s.dependency 'librabbitmq-objc'
-  s.dependency 'MGImageUtilities'
+  s.source       = { :git => "https://github.com/EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}" }
+  s.dependency 'CocoaLumberjack',  '1.6.2'
+  s.dependency 'TMCache',		   '1.2.0'
+  s.dependency 'JRSwizzle',		   '1.0'
+  s.dependency 'JSONKit',		   '1.5ctx'
+  s.dependency 'librabbitmq-objc', '0.0.4ctx'
+  s.dependency 'MGImageUtilities', '0.0.1ctx'
 
-  s.source_files = 'CTXFramework/Sources/**/*.{h,m}', 'CTXFramework/Vendor/**/*.{h,m}'
-  s.exclude_files = 'CTXFramework/Sources/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/OrderedDictionary.{h,m}', 'CTXFramework/Vendor/librabbitmq-objc/*.{h,m}', 'CTXFramework/Vendor/Reachability/*.{h,m}'
+  s.source_files = 'CTXFramework/Sources/**/*.{h,m}'
+  s.exclude_files = 'CTXFramework/Sources/Core/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/Core/Utilities/OrderedDictionary.{h,m}', 'CTXFramework/Sources/Core/Reachability/*.{h,m}'
+
+  s.subspec 'Reachability' do |reachability|
+    reachability.source_files = 'CTXFramework/Sources/Core/Reachability/*.{h,m}'
+    reachability.requires_arc = false
+  end
+
+  s.subspec 'Categories' do |cat|
+    cat.source_files = 'CTXFramework/Sources/Core/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/Core/Utilities/OrderedDictionary.{h,m}'
+    cat.requires_arc = false
+  end
 
   s.preserve_paths = 'CTXFramework/Vendor/rabbitmq-lib/librabbitmq.a'
   s.frameworks   = 'CoreData', 'CoreMedia', 'MediaPlayer'

@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'BSD', :file => 'LICENSE.md' }
   
   s.authors      = { 
-    "Alberto DeBortoli" => "alberto.debortoli@ef.com",
-    "Dmitry Makarenko"  => "dmitry.makarenko@ef.com",
     "Marco Cattai"      => "marco.cattai@ef.com",
-    "Pedro Gomes"       => "pedro.gomes@ef.com", 
-    "Stefan Ceriu"      => "stefan.ceriu@ef.com"}
+    "Stefan Ceriu"      => "stefan.ceriu@ef.com",
+    "Alberto DeBortoli" => "alberto.debortoli@ef.com",
+    "Pedro Gomes"       => "pedro.gomes@ef.com",
+    "Dmitry Makarenko"  => "dmitry.makarenko@ef.com"}
   
   s.platform     = :ios
   s.ios.deployment_target = '5.1'
