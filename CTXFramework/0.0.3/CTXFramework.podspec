@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
   s.dependency 'JSONKit',		   '1.5ctx'
   s.dependency 'librabbitmq-objc', '0.0.4ctx'
   s.dependency 'MGImageUtilities', '0.0.1ctx'
+  s.dependency 'Dropbox-iOS-SDK', '1.3.5'
 
   s.source_files = 'CTXFramework/Sources/**/*.{h,m}'
   s.exclude_files = 'CTXFramework/Sources/Core/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/Core/Utilities/OrderedDictionary.{h,m}', 'CTXFramework/Sources/Core/Reachability/*.{h,m}'
@@ -37,10 +38,10 @@ Pod::Spec.new do |s|
     cat.requires_arc = false
   end
 
-  s.preserve_paths = 'CTXFramework/Vendor/rabbitmq-lib/librabbitmq.a'
+  s.preserve_paths = '$(SRCROOT)/Pods/librabbitmq-objc/rabbitmq-lib/librabbitmq.a'
   s.frameworks   = 'CoreData', 'CoreMedia', 'MediaPlayer'
   s.libraries = 'z', 'rabbitmq'
-  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/CTXFramework/CTXFramework/Vendor/rabbitmq-lib/"' }
+  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/librabbitmq-objc/rabbitmq-lib/"' }
   s.requires_arc = true
   s.prefix_header_contents = <<-EOS
   #ifdef __OBJC__
