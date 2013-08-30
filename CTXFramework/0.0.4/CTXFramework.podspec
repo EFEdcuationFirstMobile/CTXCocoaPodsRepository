@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = '5.1'
     
-  s.source       = { :git => "https://github.com/EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}" }
   s.dependency 'CocoaLumberjack',  '1.6.2'
   s.dependency 'TMCache',		   '1.2.0'
   s.dependency 'JRSwizzle',		   '1.0'
