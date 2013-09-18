@@ -21,4 +21,12 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'git@github.com:EFEdcuationFirstMobile/librabbitmq-objc.git', :tag => '0.0.4ctx' }
   s.source_files = '*.{h,m}', 'rabbitmq-lib/*.h'
   s.requires_arc = false
+  s.exclude_files = 'CTXTTLManager.{h,m}'
+
+  s.subspec 'CTXTTLManager' do |ctxttlmanager|
+    ctxttlmanager.source_files = 'CTXTTLManager.{h,m}'
+    ctxttlmanager.requires_arc = true
+  end
+  
+  s.requires_arc = false
 end

@@ -7,4 +7,5 @@ Pod::Spec.new do |s|
   s.author   = 'John Engelhart'
   s.source   = { :git => 'https://github.com/EFEdcuationFirstMobile/JSONKit.git', :tag => '1.5ctx' }
   s.source_files   = 'JSONKit.*'
+  s.requires_arc = false
 end
