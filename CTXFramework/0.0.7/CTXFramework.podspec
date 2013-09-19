@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "git@github.com:EFEdcuationFirstMobile/CTXFramework.git", :tag => "#{s.version}" }
   s.dependency 'AFNetworking',     '1.3.2'
   s.dependency 'objectiveflickr',  '2.0.2'
-  s.dependency 'CocoaLumberjack',  '1.6.2'
+  s.dependency 'CocoaLumberjack',  '1.6.2ctx'
   s.dependency 'TMCache',          '1.2.0'
   s.dependency 'JRSwizzle',        '1.0'
   s.dependency 'JSONKit',          '1.5ctx'
@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
   s.dependency 'MGImageUtilities', '0.0.1ctx'
   s.dependency 'Dropbox-iOS-SDK',  '1.3.5'
   s.dependency 'Touchpose',        '1.0'
+  s.dependency 'OpenUDID',         '1.0.0'
 
   s.source_files = 'CTXFramework/Sources/**/*.{h,m}', 'CTXFramework/Vendor/**/*.{h,m}'
   s.exclude_files = 'CTXFramework/Sources/Core/Categories/NSURL+IDN.{h,m}', 'CTXFramework/Sources/Core/Utilities/CTXOrderedDictionary.{h,m}', 'CTXFramework/Sources/Core/Reachability/*.{h,m}'
@@ -42,7 +43,7 @@ Pod::Spec.new do |s|
   end
 
   s.preserve_paths = '$(SRCROOT)/Pods/librabbitmq-objc/rabbitmq-lib/librabbitmq.a', '$(SRCROOT)/Vendor/GoogleAPI/libGTLTouchStaticLib.a'
-  s.frameworks   = 'SystemConfiguration', 'CoreData', 'CoreMedia', 'MediaPlayer', 'MobileCoreServices'
+  s.frameworks   = 'SystemConfiguration', 'CoreData', 'CoreMedia', 'CoreText', 'MediaPlayer', 'MobileCoreServices'
   s.libraries = 'z', 'rabbitmq', 'GTLTouchStaticLib'
   s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/librabbitmq-objc/rabbitmq-lib/" "$(SRCROOT)/Pods/CTXFramework/CTXFramework/Vendor/GoogleAPI/"' }
   s.requires_arc = true
