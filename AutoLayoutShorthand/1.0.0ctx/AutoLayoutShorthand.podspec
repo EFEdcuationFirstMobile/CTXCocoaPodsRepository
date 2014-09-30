@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/rentzsch/AutoLayoutShorthand'
   s.source   = { :git => 'https://github.com/rentzsch/AutoLayoutShorthand', :tag => 'semver-1.0' }
   s.license      = { :type => 'MIT' }
-  s.source_files = 'AutoLayoutShorthand.h.{h,m}'
+  s.source_files = '*.{h,m}'
   s.requires_arc = true
 end
