@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Aspects"
-  s.version      = "1.4.1.1ctx"
+  s.version      = "1.3.1.1ctx"
   s.summary      = "Delightful, simple library for aspect oriented programming."
   s.homepage     = "https://github.com/ef-ctx/Aspects"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
