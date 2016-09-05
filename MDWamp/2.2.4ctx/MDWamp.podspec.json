@@ -32,7 +32,7 @@
     "dependencies": {
         "CocoaAsyncSocket": [],
         "MPMessagePack": [],
-        "SocketRocket": []
+        "SocketRocket": ["0.5.1ctx"]
     },
     "source_files": "MDWamp/**/*.{h,m,c}",
     "homepage": "http://github.com/mogui/MDWamp"
