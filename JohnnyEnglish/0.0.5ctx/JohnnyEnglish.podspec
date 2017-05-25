@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
   
-  s.source   = { :git => 'git@github.com:ef-ctx/JohnnyEnglish.git', :tag => "#{s.version}" }
+  s.source   = { :git => 'https://github.com/ef-ctx/JohnnyEnglish.git', :tag => "#{s.version}" }
   s.source_files = 'Sources/**/*.{h,m}'
   
 end
